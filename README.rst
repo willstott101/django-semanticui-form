@@ -28,26 +28,26 @@ Add ``semanticuiform`` to your ``INSTALLED_APPS``.
 
 At the top of your template load in our template tags::
 
-	{% load semanticui %}
+    {% load semanticui %}
 
 Then to render your form::
 
-	<form class="ui form">
-	    <legend>Form Title</legend>
-	    {% csrf_token %}
-	    {{ form|semanticui }}
+    <form class="ui form">
+        <legend>Form Title</legend>
+        {% csrf_token %}
+        {{ form|semanticui }}
         <button class="ui button" type="submit">Submit</button>
-	</form>
+    </form>
 
 To make the form with inline element, change the ``|semanticui`` template
-tag to ``|semanticui_inline``.
+tag to ``|semanticui_inline``.::
 
-	<form class="ui form">
-	    <legend>Form Title</legend>
-	    {% csrf_token %}
-	    {{ form|semanticui_inline }}
+    <form class="ui form">
+        <legend>Form Title</legend>
+        {% csrf_token %}
+        {{ form|semanticui_inline }}
         <button class="ui button" type="submit">Submit</button>
-	</form>
+        </form>
 
 
 Demo
