@@ -50,7 +50,14 @@
                 <label class="{{ classes.label }}" for="{{ field.auto_id }}">{{ field.label }}</label>
             {% endif %}
 
-            {{ field }}
+            {% if 'icon' in field.field.widget.attrs %}
+                <div class="ui icon input">
+                    {{ field }}
+                    <i class="ui icon {{ field.field.widget.attrs.icon }}"></i>
+                </div>
+            {% else %}
+                {{ field }}
+            {% endif %}
 
             {% for error in field.errors %}
                 <span class="label {{ form.error_css_class }}">{{ error }}</span>
