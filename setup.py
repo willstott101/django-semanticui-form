@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from semanticuiform.meta import VERSION
 
 setup(
-    name='django-semanticui-form',
+    name='django-semanticui-form-2.0',
     version=str(VERSION),
     description="django-semanticui-form",
     classifiers=[
@@ -18,10 +18,10 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
     ],
-    keywords='SemanticUI,django',
-    author='Peter Bengtsson',
-    author_email='mail@peterbe.com',
-    url='http://github.com/peterbe/django-semanticui-form',
+    keywords='SemanticUI,django,Semantic,Fomantic',
+    author='Maxim Harder',
+    author_email='maxim_harder@jas.de',
+    url='https://github.com/Gokujo/django-semanticui-form',
     license='BSD',
     test_suite='runtests.runtests',
     install_requires = [
