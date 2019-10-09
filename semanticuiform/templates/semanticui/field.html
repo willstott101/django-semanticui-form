@@ -1,7 +1,7 @@
 {% load semanticui %}
 
     {% if field|is_checkbox %}
-        <div class="{% if is_inline %}inline {% endif %}field">
+        <div class="{% if is_inline %}inline {% endif %}{% if field.field.required %}required {% endif %}{% if field.errors %}error {% endif %}field">
             <div class="ui checkbox {{ classes.single_value }}">
                 {% if field.auto_id %}
                     {{ field }}
@@ -20,7 +20,7 @@
         </div>
     {% elif field|is_radio %}
 
-        <div class="{% if is_inline %}inline {% endif %}grouped fields {% if field.field.required %}required{% endif %} {% if field.errors %} error{% endif %}{% if field.error %} error{% endif %}">
+        <div class="{% if is_inline %}inline {% endif %}grouped fields {% if field.field.required %}required{% endif %} {% if field.errors %} error{% endif %}">
             {% if field.auto_id %}
                 <label>{{ field.label }}</label>
             {% endif %}
@@ -34,7 +34,7 @@
             {% endfor %}
 
             {% for error in field.errors %}
-                <span class="ui pointing red basic label {{ form.error_css_class }}">{{ error }}</span>
+                <span class="label {{ form.error_css_class }}">{{ error }}</span>
             {% endfor %}
 
             {% if field.help_text %}
@@ -45,22 +45,15 @@
         </div>
 
     {% else %}
-        <div class="{% if is_inline %}inline {% endif %}field {% if field.field.required %}required{% endif %} {% if field.errors %} error{% endif %}{% if field.error %} error{% endif %}">
+        <div class="{% if is_inline %}inline {% endif %}field {% if field.field.required %}required{% endif %} {% if field.errors %} error{% endif %}">
             {% if field.auto_id %}
                 <label class="{{ classes.label }}" for="{{ field.auto_id }}">{{ field.label }}</label>
             {% endif %}
 
-            {% if 'icon' in field.field.widget.attrs %}
-                <div class="ui icon input">
-                    {{ field }}
-                    <i class="ui icon {{ field.field.widget.attrs.icon }}"></i>
-                </div>
-            {% else %}
-                {{ field }}
-            {% endif %}
+            {{ field }}
 
             {% for error in field.errors %}
-                <span class="ui pointing red basic label {{ form.error_css_class }}">{{ error }}</span>
+                <span class="label {{ form.error_css_class }}">{{ error }}</span>
             {% endfor %}
 
             {% if field.help_text %}

@@ -15,6 +15,8 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
     ],
     keywords='SemanticUI,django',
     author='Peter Bengtsson',
@@ -23,7 +25,7 @@ setup(
     license='BSD',
     test_suite='runtests.runtests',
     install_requires = [
-        "django>=1.3",
+        "django>=2.0",
     ],
     packages=find_packages(),
     include_package_data=True,

@@ -54,12 +54,12 @@ def render(element, markup_classes, is_inline):
     if element_type == 'boundfield':
         # add_input_classes(element)
         template = get_template("semanticui/field.html")
-        context = Context({
+        context = {
             'field': element,
             'classes': markup_classes,
             'form': element.form,
             'is_inline': is_inline,
-        })
+        }
     else:
         has_management = getattr(element, 'management_form', None)
         if has_management:
@@ -67,20 +67,20 @@ def render(element, markup_classes, is_inline):
             #     for field in form.visible_fields():
             #         add_input_classes(field)
             template = get_template("semanticui/formset.html")
-            context = Context({
+            context = {
                 'formset': element,
                 'classes': markup_classes,
                 'is_inline': is_inline,
-            })
+            }
         else:
             # for field in element.visible_fields():
             #     add_input_classes(field)
             template = get_template("semanticui/form.html")
-            context = Context({
+            context = {
                 'form': element,
                 'classes': markup_classes,
                 'is_inline': is_inline,
-            })
+            }
 
     return template.render(context)
 
