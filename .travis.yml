@@ -1,8 +1,8 @@
 language: python
 python:
-- '2.7'
-- '3.3'
-- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
 install:
 - pip install coverage coveralls
 script:
@@ -11,9 +11,9 @@ after_success:
 - coveralls
 deploy:
   provider: pypi
-  user: peterbe
+  user: MaHarder
   password:
-    secure: eV46DAh+a4chCo/MaE7oqknzRaynF/oUnzLBD3MV/JYZEo5I09q3Fw92im3TOLUJKFqSti17VmWxLbStEci993xJwaMl3rteq8xuOI8k8aixnBY3333UDhTaV2RLAmX/0MeHgFKXONZMf8ngVAGs7X3y8pwsVUuxa8UNUPr78BzPSFiVQiUfByTzJIxotDj0uk4xdVhI3DOg9v3piFKC/9n6TsWX4B1N53Ro7xU80emULN35YVnPLmcdcegnH3Jllp/dbi8a8MwaEnuAXixP6qkrvhMzBYIgxeutgyjj6Eb1Mr9ufrkgGVGLAEqdNOSYLhr30AZUwOyIUunsceAi9bFC6jf8Jz2JlJangZAOl5eKFf3IZq7SCTFQcHU48yh5Y6dhEVRNo/Sz0XuuXC/JmY9TOsryn5F2oHd4nyqxf4P7PbZF2lvU3SjCPBAZWWZVIN39WKFIdmmcfcxLNuFduOOr6CgbZLqZ8W2cqzH8xKEHhKDv3pLP+WWCsOdQjufViggxmB7HjMhTOYcDtRzaNmeak34WikZ55pUeQv+AO543hMhMgSQSFxSG+agJJLbcz1WTn/DAukfecbaEVV1h8LtaoreNHt/N9/semsfCDBZYJrjoeeWBYs4f5P+dXPWlfANwjtZubYXRWWeza85PW85a7BuKf2ij/Psml3B4OzA=
+    secure: pypi-AgEIcHlwaS5vcmcCJGVmMjI1ODIyLWU0YTQtNDRhZS05ZTUzLThjZDVmNTZkZWY5MgACSHsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJkamFuZ28yLXNlbWFudGljdWktZm9ybSJdfSwgInZlcnNpb24iOiAxfQAABiABZNePs-zIfHzJo4UcUHDJ3UxB8bMk3zgv9NoUz5KAVA
   on:
-    repo: peterbe/django-semanticui-form
+    repo: MaHarder/django2-semanticui-form
   distributions: "sdist bdist_wheel"
