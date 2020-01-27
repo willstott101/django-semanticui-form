@@ -18,7 +18,7 @@ Semantic (Fomantic) UI for Django Form.
 A simple Django template tag to work with `Semantic UI <http://semantic-ui.com/>`_
 
 This project is a fork from
-`django-bootstrap-form <https://github.com/peterbe/django-semanticui-form>`_ by
+`django-semanticui-form <https://github.com/peterbe/django-semanticui-form>`_ by
 `peterbe <https://github.com/peterbe>`_.
 
 Some fixes by me
